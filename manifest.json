@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Superchat Recorder",
+  "version": "1.0",
+  "description": "Records Superchats from YouTube live streams.",
+  "permissions": [
+    "storage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.youtube.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Superchat Recorder"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["content.js"],
+      "all_frames": true
+    }
+  ]
+}
