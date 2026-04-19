@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+    <defs>
+        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FF4B2B" />
+            <stop offset="100%" stop-color="#FF416C" />
+        </linearGradient>
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.3"/>
+        </filter>
+    </defs>
+    <rect width="120" height="120" rx="28" fill="url(#bg)" />
+    <path d="M85 35H35c-5.5 0-10 4.5-10 10v30c0 5.5 4.5 10 10 10h15l10 10 10-10h15c5.5 0 10-4.5 10-10V45c0-5.5-4.5-10-10-10z" fill="#ffffff" filter="url(#shadow)"/>
+    <text x="60" y="68" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="28" fill="#FF416C" text-anchor="middle">$</text>
+</svg>
