@@ -2,7 +2,7 @@
   <img src="logo.svg" alt="Logo" width="100"/>
 </p>
 
-# YouTube Superchat Recorder Extension
+# YouTube Live Superchat Recorder Extension
 
 A simple Chrome extension that observes a live YouTube chat window, identifies and records superchat messages, and persists this data to local storage. It captures the author's name, the purchase amount (including currency), and the message content.
 
