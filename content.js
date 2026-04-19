@@ -45,8 +45,7 @@ function extractSuperchatData(node) {
     author,
     amount,
     message,
-    timestamp,
-    recordedAt: new Date().toISOString()
+    timestamp: new Date().toISOString()
   };
 }
 

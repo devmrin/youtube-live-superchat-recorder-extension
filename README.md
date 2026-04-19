@@ -13,7 +13,8 @@ A simple Chrome extension that observes a live YouTube chat window, identifies a
 ## Features
 - Automatically records superchat messages from YouTube live streams.
 - Saves data (author, amount, message) to local storage.
-- Popup to view the recorded data.
+- Records timestamp as UTC ISO strings.
+- Popup UI allows viewing recorded superchats in real-time with localized timestamps inside a scrollable area.
 - Export data as JSON.
 
 ## Sample Export JSON

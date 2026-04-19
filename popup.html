@@ -7,8 +7,11 @@
 <body>
   <div class="container">
     <h2>Superchat Recorder</h2>
-    <div class="stats">
+    <div class="stats" id="statsBtn" style="cursor: pointer;" title="Click to view/hide superchats">
       <span id="count">0</span> superchats recorded
+    </div>
+    <div id="listContainer" class="hidden">
+      <ul id="superchatList"></ul>
     </div>
     <div class="controls">
       <button id="toggleBtn">Start Recording</button>

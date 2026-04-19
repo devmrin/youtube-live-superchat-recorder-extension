@@ -24,6 +24,58 @@ h2 {
   padding: 10px; 
   border-radius: 8px; 
 }
+#statsBtn:hover {
+  background: #333;
+}
+.hidden {
+  display: none !important;
+}
+#listContainer {
+  max-height: 150px;
+  overflow-y: auto;
+  background: #2a2a2a;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 12px;
+}
+#superchatList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sc-item {
+  border-bottom: 1px solid #444;
+  padding-bottom: 10px;
+}
+.sc-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.sc-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.sc-author {
+  font-weight: 600;
+  color: #fff;
+}
+.sc-amount {
+  color: #4CAF50;
+  font-weight: 600;
+}
+.sc-time {
+  color: #888;
+  font-size: 10px;
+  margin-bottom: 4px;
+}
+.sc-message {
+  color: #ddd;
+  word-break: break-word;
+}
 #count { 
   font-weight: bold; 
   color: #ff4e4e; 
