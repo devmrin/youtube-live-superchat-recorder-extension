@@ -6,17 +6,51 @@
 </head>
 <body>
   <div class="container">
-    <h2>Superchat Recorder</h2>
+    <header class="header">
+      <img src="logo.svg" alt="" class="logo" width="24" height="24">
+      <h2>Superchat Recorder</h2>
+    </header>
     <div class="stats" id="statsBtn" style="cursor: pointer;" title="Click to view/hide superchats">
-      <span id="count">0</span> superchats recorded
+      <svg class="stats-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+      <span><span id="count">0</span> superchats recorded</span>
     </div>
     <div id="listContainer" class="hidden">
       <ul id="superchatList"></ul>
     </div>
     <div class="controls">
-      <button id="toggleBtn">Start Recording</button>
-      <button id="downloadBtn">Export JSON</button>
-      <button id="clearBtn">Clear Data</button>
+      <button id="toggleBtn" type="button">
+        <span class="btn-icon" aria-hidden="true">
+          <svg class="icon-record" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="7"/>
+          </svg>
+          <svg class="icon-stop hidden" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="7" y="7" width="10" height="10" rx="1"/>
+          </svg>
+        </span>
+        <span class="btn-label">Start Recording</span>
+      </button>
+      <button id="downloadBtn" type="button">
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v10"/>
+            <path d="M8 11l4 4 4-4"/>
+            <path d="M5 19h14"/>
+          </svg>
+        </span>
+        <span class="btn-label">Export JSON</span>
+      </button>
+      <button id="clearBtn" type="button">
+        <span class="btn-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h16"/>
+            <path d="M9 7V5h6v2"/>
+            <path d="M8 7l1 12h6l1-12"/>
+          </svg>
+        </span>
+        <span class="btn-label">Clear Data</span>
+      </button>
     </div>
   </div>
   <script src="popup.js"></script>

@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
   const toggleBtn = document.getElementById('toggleBtn');
+  const toggleLabel = toggleBtn.querySelector('.btn-label');
+  const recordIcon = toggleBtn.querySelector('.icon-record');
+  const stopIcon = toggleBtn.querySelector('.icon-stop');
   const countEl = document.getElementById('count');
   const statsBtn = document.getElementById('statsBtn');
   const listContainer = document.getElementById('listContainer');
@@ -49,7 +52,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   statsBtn.addEventListener('click', () => {
     listContainer.classList.toggle('hidden');
+    statsBtn.classList.toggle('collapsed', listContainer.classList.contains('hidden'));
   });
+  statsBtn.classList.add('collapsed');
 
   toggleBtn.addEventListener('click', async () => {
     const { isRecording } = await chrome.storage.local.get({ isRecording: false });
@@ -93,11 +98,15 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function updateUI(recording, count) {
     if (recording) {
-      toggleBtn.textContent = 'Stop Recording';
+      toggleLabel.textContent = 'Stop Recording';
       toggleBtn.classList.add('recording');
+      recordIcon.classList.add('hidden');
+      stopIcon.classList.remove('hidden');
     } else {
-      toggleBtn.textContent = 'Start Recording';
+      toggleLabel.textContent = 'Start Recording';
       toggleBtn.classList.remove('recording');
+      recordIcon.classList.remove('hidden');
+      stopIcon.classList.add('hidden');
     }
     countEl.textContent = count;
   }
