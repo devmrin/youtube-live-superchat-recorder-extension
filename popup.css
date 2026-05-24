@@ -135,10 +135,24 @@ button {
   cursor: pointer; 
   transition: background 0.2s; 
 }
-#toggleBtn { background: #ff4e4e; color: white; }
-#toggleBtn:hover { background: #ff3333; }
-#toggleBtn.recording { background: #555; }
-#toggleBtn.recording:hover { background: #444; }
+#toggleBtn {
+  background: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+#toggleBtn:hover { background: #3d3d3d; }
+#toggleBtn .icon-record { color: #ff4e4e; }
+#toggleBtn.recording {
+  background: #ff4e4e;
+  border-color: #ff4e4e;
+  animation: recording-glow 2s ease-in-out infinite;
+}
+#toggleBtn.recording:hover { background: #ff3333; }
+#toggleBtn.recording .icon-stop { color: #fff; }
+@keyframes recording-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 78, 78, 0.5); }
+  50% { box-shadow: 0 0 0 4px rgba(255, 78, 78, 0); }
+}
 #downloadBtn { background: #333; color: white; }
 #downloadBtn:hover { background: #444; }
 #clearBtn { background: transparent; color: #aaa; border: 1px solid #444; }

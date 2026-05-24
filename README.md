@@ -8,7 +8,7 @@ A simple Chrome extension that observes a live YouTube chat window, identifies a
 
 ## Preview
 
-<img src="screenshot.png" alt="Extension Popup Screenshot" width="400"/>
+<img src="./screenshot.png" alt="Extension Popup Screenshot" width="400"/>
 
 ## Features
 - Automatically records superchat messages from YouTube live streams.
