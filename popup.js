@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function renderList(superchats) {
     superchatList.innerHTML = '';
-    superchats.forEach(sc => {
+    [...superchats].reverse().forEach(sc => {
       const li = document.createElement('li');
       li.className = 'sc-item';
       
@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       `;
       superchatList.appendChild(li);
     });
+    listContainer.scrollTop = 0;
   }
 
   // Load initial state
